@@ -1,0 +1,84 @@
+/* Base styling for navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: #fff;
+  }
+  
+  .navbar__brand h1 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  
+  .navbar__logo {
+    width: 40px; /* Adjust logo size */
+    margin-right: 10px; /* Space between logo and text */
+    border-radius: 50%;
+    height: 40px;
+    object-fit: cover;
+  }
+  
+  .navbar__links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar__links li {
+    margin-right: 2rem;
+  }
+  
+  .navbar__links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar__links a:hover {
+    color: #4CAF50;
+  }
+  
+  /* Hamburger menu styling for small screens */
+  .navbar__toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .toggle-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+  }
+  
+  /* Media Queries for Mobile Responsiveness */
+  @media screen and (max-width: 768px) {
+    .navbar__links {
+      display: none;
+      width: 100%;
+      text-align: center;
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+  
+    .navbar__links.active {
+      display: flex;
+    }
+  
+    .navbar__links li {
+      margin: 1rem 0;
+    }
+  
+    .navbar__toggle {
+      display: flex;
+    }
+  }
+  
